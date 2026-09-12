@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
         }
         else
         {
-            transform.Translate(_direction * (speed * Time.deltaTime));
+            transform.Translate(_direction * (speed * Time.deltaTime), Space.World);
         }
     }
 

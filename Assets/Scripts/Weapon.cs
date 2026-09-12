@@ -8,9 +8,11 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private Transform muzzle;
 
+    public Transform Muzzle { get => muzzle; set => muzzle = value; }
+
     private float nextAttackTime;
 
-    public WeaponData Data => data;
+    public WeaponData Data { get => data; set => data = value; }
 
     public void Attack()
     {

@@ -24,10 +24,8 @@ public abstract class Actor : MonoBehaviour
 
     public virtual void Attack()
     {
-        if (weapon == null)
-            return;
-
-        weapon.Attack();
+        if (weapon != null)
+            weapon.Attack();
     }
 
     public virtual void TakeDamage(float damage)
