@@ -7,19 +7,23 @@ public abstract class Actor : MonoBehaviour
 
     [SerializeField]
     private Weapon weapon;
-
-    [SerializeField]
-    private float attackRadius;
+    
+    [SerializeField] private WeaponData weaponData;
 
     public float Hp { get; private set; }
 
     public Weapon Weapon => weapon;
 
-    public float AttackRadius => attackRadius;
-
     protected virtual void Awake()
     {
         Hp = maxHp;
+    }
+
+    protected virtual void Start()
+    {
+        Weapon weapon = gameObject.AddComponent<Weapon>();
+        weapon.Data = weaponData;
+        EquipWeapon(weapon);
     }
 
     public virtual void Attack()
@@ -31,6 +35,7 @@ public abstract class Actor : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         Hp -= damage;
+        Debug.Log($"{gameObject.name}: {damage} damage");
 
         if (Hp <= 0)
         {

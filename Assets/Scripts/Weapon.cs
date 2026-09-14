@@ -14,6 +14,19 @@ public class Weapon : MonoBehaviour
 
     public WeaponData Data { get => data; set => data = value; }
 
+    private void Start()
+    {
+        // Find the muzzle of attached weapons to determine where the projectile comes out
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).CompareTag("Weapon"))
+            {
+                muzzle = transform.GetChild(i);
+                break;
+            }
+        }
+    }
+
     public void Attack()
     {
         if (data == null)

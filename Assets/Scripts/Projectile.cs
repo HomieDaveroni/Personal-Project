@@ -31,9 +31,13 @@ public class Projectile : MonoBehaviour
         if (Physics.Raycast(new Ray(transform.position, _direction), out RaycastHit hit, speed * Time.deltaTime))
         {
             transform.position = hit.point;
-            hit.collider.SendMessage("TakeDamage", _damage, SendMessageOptions.DontRequireReceiver);
+            Actor actor = hit.collider.GetComponentInParent<Actor>();
+            if (actor != null)
+            {
+                actor.TakeDamage(_damage);
+            }
             _meshRenderer.enabled = false;
-            Destroy(gameObject, lifetime);
+            Destroy(gameObject, 1f);
             Destroy(this);
         }
         else

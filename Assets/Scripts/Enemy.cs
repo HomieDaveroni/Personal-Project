@@ -7,16 +7,19 @@ public class Enemy : Actor
 
     [SerializeField]
     private float moveSpeed = 2f;
+    
+    [SerializeField] private Rigidbody rb;
 
     private Transform _target;
 
     protected override void Awake()
     {
         _target = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody>();
         base.Awake();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_target == null)
             return;
@@ -26,23 +29,30 @@ public class Enemy : Actor
             _target.position
         );
 
-        if (distance <= noticeRadius && distance >= AttackRadius)
-        {
-            MoveTowardsTarget();
+        if (distance > noticeRadius)
+            return;
 
-            if (Weapon != null)
-            {
-                Attack();
-            }
+        if (Weapon != null && distance <= Weapon.Data.range)
+        {
+            rb.linearVelocity = Vector3.zero;
+            RotateTowardsPlayer();
+            Attack();
+        }
+        else
+        {
+            RotateTowardsPlayer();
+            MoveTowardsPlayer();
         }
     }
 
-    private void MoveTowardsTarget()
+    private void MoveTowardsPlayer()
     {
-        Vector3 direction =
-            (_target.position - transform.position).normalized;
+        Vector3 direction = (_target.position - transform.position).normalized;
+        rb.linearVelocity = direction * moveSpeed;
+    }
 
-        transform.position +=
-            direction * (moveSpeed * Time.deltaTime);
+    private void RotateTowardsPlayer()
+    {
+        transform.rotation = Quaternion.LookRotation(_target.transform.position - transform.position);
     }
 }

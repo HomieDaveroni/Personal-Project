@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da869d9e297b4c7e82aa65cfec71dc0e, type: 3}
+  m_Name: Beer
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  itemName: 
+  icon: {fileID: 0}
+  damage: 20
+  attackCooldown: 4
+  range: 5
+  projectilePrefab: {fileID: -2937553469111080238, guid: ac12a1209338e004b9aa3f34778e1759, type: 3}

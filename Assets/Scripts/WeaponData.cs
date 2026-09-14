@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(
@@ -12,5 +13,5 @@ public class WeaponData : Item
 
     public float range = 10f;
 
-    public Projectile projectilePrefab;
+    [CanBeNull] public Projectile projectilePrefab;
 }
