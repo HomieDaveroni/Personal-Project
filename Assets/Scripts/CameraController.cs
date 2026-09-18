@@ -16,6 +16,10 @@ namespace DefaultNamespace
 
         void MoveCamera()
         {
+            if (target == null)
+            {
+                return;
+            }
             transform.position = Vector3.Lerp(transform.position, target.position + targetOffset, movementSpeed * Time.deltaTime);
         }
     }

@@ -36,6 +36,7 @@ public class Enemy : Actor
         {
             rb.linearVelocity = Vector3.zero;
             RotateTowardsPlayer();
+            RotateWeaponTowardsPlayer();
             Attack();
         }
         else
@@ -54,5 +55,18 @@ public class Enemy : Actor
     private void RotateTowardsPlayer()
     {
         transform.rotation = Quaternion.LookRotation(_target.transform.position - transform.position);
+    }
+    
+    private void RotateWeaponTowardsPlayer()
+    {
+        if (Weapon == null)
+            return;
+
+        Vector3 direction = (_target.position - Weapon.transform.position).normalized;
+
+        if (direction.sqrMagnitude < 0.0001f)
+            return;
+        
+        Weapon.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
 }

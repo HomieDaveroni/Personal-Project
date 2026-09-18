@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da869d9e297b4c7e82aa65cfec71dc0e, type: 3}
-  m_Name: American_Football
+  m_Name: Ball
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  itemName: Booger
+  itemName: 
   icon: {fileID: 0}
-  damage: 15
-  attackCooldown: 2
-  range: 15
-  projectilePrefab: {fileID: 2261618976308678092, guid: f0f3802e64e6dbb4ab55186bc6a2b9de, type: 3}
+  damage: 20
+  attackCooldown: 3
+  range: 7
+  projectilePrefab: {fileID: -7932944941774129100, guid: 92c10d467f2a7a543b5bc85bdf0d90c8, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Booger
   icon: {fileID: 0}
   damage: 10
-  attackCooldown: 0.5
+  attackCooldown: 0.1
   range: 8
   projectilePrefab: {fileID: 2000000005, guid: 4dab47822cd74689aed0a83fa0023eb3, type: 3}

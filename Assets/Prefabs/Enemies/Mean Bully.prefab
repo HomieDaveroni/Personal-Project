@@ -132,7 +132,7 @@ MonoBehaviour:
   maxHp: 100
   weapon: {fileID: 0}
   weaponData: {fileID: 11400000, guid: 075e99a807a616641b923e5b8bb047c4, type: 2}
-  noticeRadius: 15
+  noticeRadius: 20
   moveSpeed: 10
   rb: {fileID: 0}
 --- !u!54 &6891311512491995737
