@@ -12,9 +12,12 @@ public class Enemy : Actor
 
     private Transform _target;
 
+    private Weapon _heldWeapon;
+
     protected override void Awake()
     {
         _target = GameObject.FindGameObjectWithTag("Player").transform;
+        _heldWeapon = GetComponentInChildren<Weapon>();
         rb = GetComponent<Rigidbody>();
         base.Awake();
     }
@@ -32,14 +35,16 @@ public class Enemy : Actor
         if (distance > noticeRadius)
             return;
 
-        if (Weapon != null && distance <= Weapon.Data.range)
+        if (_heldWeapon != null && distance <= _heldWeapon.Data.range)
         {
             rb.linearVelocity = Vector3.zero;
             RotateTowardsPlayer();
+            RotateWeaponTowardsPlayer();
             Attack();
         }
         else
         {
+            // TO-DO: only call method when weapon rotation isn't aligned with player position.
             RotateTowardsPlayer();
             MoveTowardsPlayer();
         }
@@ -54,5 +59,11 @@ public class Enemy : Actor
     private void RotateTowardsPlayer()
     {
         transform.rotation = Quaternion.LookRotation(_target.transform.position - transform.position);
+    }
+
+    private void RotateWeaponTowardsPlayer()
+    {
+        Vector3 direction = _target.position - _heldWeapon.transform.position;
+        _heldWeapon.transform.rotation = Quaternion.LookRotation(direction);
     }
 }

@@ -16,5 +16,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   damage: 15
   attackCooldown: 2
-  range: 10
+  range: 15
   projectilePrefab: {fileID: 2261618976308678092, guid: f0f3802e64e6dbb4ab55186bc6a2b9de, type: 3}

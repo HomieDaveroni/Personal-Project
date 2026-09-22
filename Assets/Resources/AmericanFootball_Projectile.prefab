@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec6dcd7c31143259188f871451b72f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 15
-  lifetime: 3
+  speed: 25
+  lifetime: 2
 --- !u!96 &-2585317960697348599
 TrailRenderer:
   serializedVersion: 4

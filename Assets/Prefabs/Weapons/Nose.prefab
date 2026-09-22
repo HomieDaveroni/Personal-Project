@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5192254641806311850}
   - component: {fileID: 5030571651143936729}
   - component: {fileID: 5145155410482375298}
+  - component: {fileID: -1937922417325011425}
   m_Layer: 0
   m_Name: Nose
   m_TagString: Weapon
@@ -90,3 +91,17 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-1937922417325011425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059460535453048647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456c9079d55c4cfabc3876032cbeb946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Weapon
+  data: {fileID: 11400000, guid: 1754e7fac487117489dd5aaf7ad00a7c, type: 2}
+  muzzle: {fileID: 5192254641806311850}
