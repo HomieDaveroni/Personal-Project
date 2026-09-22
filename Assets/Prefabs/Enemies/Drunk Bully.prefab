@@ -9,11 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3772398544108632162}
-<<<<<<< HEAD
   m_Layer: 3
-=======
-  m_Layer: 0
->>>>>>> origin/main
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,11 +211,7 @@ GameObject:
   - component: {fileID: 3063922357699805087}
   - component: {fileID: 5386268192938059765}
   - component: {fileID: 4819290306211905339}
-<<<<<<< HEAD
   m_Layer: 3
-=======
-  m_Layer: 0
->>>>>>> origin/main
   m_Name: HP_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,11 +313,7 @@ GameObject:
   - component: {fileID: 4546800552693865596}
   - component: {fileID: 5726081821861921229}
   - component: {fileID: 5103534888655633579}
-<<<<<<< HEAD
   m_Layer: 3
-=======
-  m_Layer: 0
->>>>>>> origin/main
   m_Name: HP_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,11 +415,7 @@ GameObject:
   - component: {fileID: 6479760749921900517}
   - component: {fileID: 3076052259794546930}
   - component: {fileID: 3722015353657445008}
-<<<<<<< HEAD
   m_Layer: 3
-=======
-  m_Layer: 0
->>>>>>> origin/main
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,11 +490,7 @@ GameObject:
   - component: {fileID: 2766639532607879036}
   - component: {fileID: 2281232233574166042}
   - component: {fileID: 5381792231436466043}
-<<<<<<< HEAD
   m_Layer: 3
-=======
-  m_Layer: 0
->>>>>>> origin/main
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
