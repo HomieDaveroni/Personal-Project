@@ -37,7 +37,10 @@ public class Weapon : MonoBehaviour
 
         nextAttackTime = Time.time + data.attackCooldown;
 
-        Fire();
+        if (data.projectilePrefab)
+        {
+            Fire();
+        }
     }
 
     private void Fire()

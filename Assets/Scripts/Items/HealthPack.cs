@@ -1,4 +1,4 @@
-﻿using DefaultNamespace.GameObjects;
+﻿using DefaultNamespace.StringConverts;
 using UnityEngine;
 
 namespace DefaultNamespace.Items

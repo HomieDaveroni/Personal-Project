@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.GameObjects
+namespace DefaultNamespace.StringConverts
 {
     public class GameObjectTags
     {
