@@ -13,7 +13,11 @@ public abstract class Actor : MonoBehaviour
     public float Hp { get; private set; }
 
     public Weapon Weapon => weapon;
-    
+
+    public float GetMaxHp()
+    {
+        return maxHp;
+    }
     
     public virtual void Attack()
     {
@@ -29,6 +33,15 @@ public abstract class Actor : MonoBehaviour
         if (Hp <= 0)
         {
             Die();
+        }
+    }
+
+    public virtual void Heal(float amount)
+    {
+        Hp += amount;
+        if (Hp > maxHp)
+        {
+            Hp = maxHp;
         }
     }
 

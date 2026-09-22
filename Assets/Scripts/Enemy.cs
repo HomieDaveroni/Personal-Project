@@ -1,3 +1,4 @@
+using DefaultNamespace.GameObjects;
 using UnityEngine;
 
 public class Enemy : Actor
@@ -16,7 +17,7 @@ public class Enemy : Actor
 
     protected override void Awake()
     {
-        _target = GameObject.FindGameObjectWithTag("Player").transform;
+        _target = GameObject.FindGameObjectWithTag(GameObjectTags.Player).transform;
         _heldWeapon = GetComponentInChildren<Weapon>();
         rb = GetComponent<Rigidbody>();
         base.Awake();

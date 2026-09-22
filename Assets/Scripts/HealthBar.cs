@@ -1,3 +1,4 @@
+using DefaultNamespace.GameObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,8 +13,8 @@ public class HealthBar : MonoBehaviour
     protected void Start()
     {
         _healthBar = GetComponent<Slider>();
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        _healthText = GameObject.Find("Value_Text").GetComponent<TextMeshProUGUI>();
+        _player = GameObject.FindGameObjectWithTag(GameObjectTags.Player).GetComponent<Player>();
+        _healthText = GameObject.Find(GameObjectTags.HpValueText).GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
